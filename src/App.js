@@ -8,13 +8,13 @@ function App() {
   const [todos,setTodos] = useState([]);
   const todoNameRef = useRef();
 
-  useEffect(() => {
+  useEffect(() => { //Store to dos
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (storedTodos) setTodos(storedTodos)
 
   }, [])
 
-  useEffect(() => {
+  useEffect(() => { //Get to dos
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
 
   }, [todos])
