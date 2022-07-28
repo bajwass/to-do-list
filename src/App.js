@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import ToDoList from "./ToDoList";
 
 function App() {
+  const [todos,setTodos] = useState(['todo1 ', 'todo 2']);
  return (
   <>
-    <ToDoList />
+    <ToDoList todos ={todos} />
     <input type="text" />
     <button>Add To Do</button>
     <button>Clear Complete</button>
